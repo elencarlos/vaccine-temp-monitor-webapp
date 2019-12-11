@@ -4,35 +4,42 @@ A web app that lively plots data from a Firebase Realtime Database node, thanks 
 
 <!DOCTYPE html>
 <html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ESP8266 Web App</title>
+		<link rel="stylesheet" href="style.css" />
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>ESP8266 Web App</title>
-	<link rel="stylesheet" href="style.css">
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<!-- Firebase App is always required and must be first -->
+		<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
 
-	<!-- Firebase App is always required and must be first -->
-	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
-	<!-- Add additional services that you want to use -->
-	<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-database.js"></script>
+		<!-- Add additional services that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-database.js"></script>
 
-	<!-- Include Plotly.js -->
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<!-- Include the moment.js library -->
-	<script src="https://momentjs.com/downloads/moment.js"></script>
-</head>
+		<!-- Include Plotly.js -->
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<!-- Include the moment.js library -->
+		<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+	</head>
 
-<body>
-	<!-- Plotly chart will be drawn inside this div. -->
-	<div id="myPlot" style="width: 100vw; max-height:75vh"></div>
+	<body>
+		<!-- Plotly chart will be drawn inside this div. -->
+		<div>
+			<div>
+				<div>Temperatura</div>
+				<div id="temperature" class="temperature"></div>
+			</div>
+			<div>
+				<div>Humidade</div>
+				<div id="humidity" class="humidity"></div>
+			</div>
+		</div>
+		<div id="myPlot" style="width: 100vw; max-height:75vh"></div>
 
-	<p style="text-align: center; margin: 0">
-		<b>ESP8266 rocks! </b>Read the full stories on
-		<a target="_blank" href="https://medium.com/@o.lourme">Medium</a>
-		and <a target="_blank" href="https://github.com/olivierlourme/esp8266webapp">Github</a>.
-	</p>
-	<!-- Include the script describing the work to do -->
-	<script src="script.js"></script>
-</body>
-
+		<!-- Include the script describing the work to do -->
+		<script src="script.js"></script>
+	</body>
 </html>

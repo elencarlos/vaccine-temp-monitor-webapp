@@ -21,3 +21,4 @@ See the real live plot of [my veranda luminosity](https://esp8266-rocks.firebase
 ## Acknowledgments
 
 * [https://angularfirebase.com/lessons/realtime-charts-with-plot-ly/](https://angularfirebase.com/lessons/realtime-charts-with-plot-ly/)
+# vacina-palmas-webapp
